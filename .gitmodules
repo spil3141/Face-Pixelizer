@@ -1,0 +1,3 @@
+[submodule "Face-Pixelizer/vendor/python"]
+	path = Face-Pixelizer/vendor/python
+	url = https://github.com/spil3141/python3.8.git
