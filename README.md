@@ -3,6 +3,7 @@
 
 Built with a bunch of things, to name a few: 
 - [OpenGL](https://www.opengl.org/)
+- [ImGui](https://github.com/ocornut/imgui)
 
 ## Setup
 ... very important to get the project up and running 
