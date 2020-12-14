@@ -1,5 +1,5 @@
 #pragma once
-#include "Tiny.h"
+#include <Tiny.h>
 using namespace Tiny;
 
 #include <filesystem> // std::filesystem::current_path()
@@ -33,10 +33,11 @@ private:
 
 	// python script loc
 	std::string m_PyScript = std::filesystem::current_path().string() + std::string("/res/python/src/pixelize.py");
-	std::string m_python = "vendor/python";
-	std::string m_output_dir = std::filesystem::current_path().string() + std::string("/res/python/res/output");
+	std::string m_python = "vendor/python3.8/python";
+	std::string m_output_dir = std::filesystem::current_path().string() + std::string("/res/python/res/data/output");
 	std::string m_Command = "";
 	bool m_DisplayConvertBTN = false;
+	bool m_CanOpenNewFile = true;
 
 	std::thread t_worker;
 };

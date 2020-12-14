@@ -38,29 +38,29 @@ project "Face-Pixelizer"
     includedirs
     {
         "%{wks.location}/%{prj.name}/src",
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/include",
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/vendor/spdlog/include",
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/vendor/ImGui",
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/vendor/glm/include",
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/vendor/asio/include",
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/vendor/EnTT/include"
+        "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/include",
+        "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/vendor/spdlog/include",
+        "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/vendor/ImGui",
+        "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/vendor/glm/include",
+        "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/vendor/asio/include",
+        "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/vendor/EnTT/include",
+        -- "%{wks.location}/%{prj.name}/vendor/python3.8/include"
     }
 
     libdirs 
     { 
-        "%{wks.location}/%{prj.name}/vendor/Tiny_0.2/libs",
+        -- "%{wks.location}/%{prj.name}/vendor/python3.8/libs"
+    }
+
+    links 
+    {
+        -- "python38.lib",
     }
 
     defines 
     {
     }
 
-    links {
-        "Tiny_debug",
-        "Glad",
-        "GLFW",
-        "ImGui"
-    }
 
     filter "system:windows"
         systemversion "latest"
@@ -68,7 +68,29 @@ project "Face-Pixelizer"
     filter "configurations:Debug"
         defines "T_DEBUG"
         symbols "On"
-
+        libdirs
+        {
+            "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/libs/debug"
+        }
+        links {
+            "Tiny_debug",
+            "Glad",
+            "GLFW",
+            "ImGui",
+            -- "python38_d.lib",
+        }
     filter "configurations:Release"
         defines "T_RELEASE"
         optimize "On"
+        libdirs
+        {
+            "%{wks.location}/%{prj.name}/vendor/Tiny_v0.2/libs/release"
+        }
+        links {
+            "Tiny",
+            "Glad",
+            "GLFW",
+            "ImGui",
+            -- "python38.lib",
+        }
+ 
