@@ -1,13 +1,18 @@
 # Face-Pixelizer
-> A 2D pixel art generator, I utilized TensorFlow to build a deep learning convolutional autoencoder trained to learn a function for pixilation. 
+>  A 2D pixel art generator, I utilized google's free and open-source library for machine learning to build a deep learning convolutional autoencoder trained to learn a pixelation effect function. 
 
 Built with a bunch of things, to name a few: 
-- [OpenGL](https://www.opengl.org/)
-- [ImGui](https://github.com/ocornut/imgui)
+- [OpenGL v4.6](https://www.opengl.org/)
+- [GLSL v330 core](https://www.khronos.org/registry/OpenGL/specs/gl/GLSLangSpec.3.30.pdf)
+- [ImGui v1.78](https://github.com/ocornut/imgui)
+- [Tensorflow v2.4](https://www.tensorflow.org/)
 
 ## Setup
-... very important to get the project up and running 
-... coming soon 
+#### Build instruction
+- clone the repo with ***--recursive*** flag
+- run the *** GenerateProject.bat*** script in the Scripts folder to generate a visual studio 2019 solution. 
+#### dependencies setup
+- This application uses python3.8 which requires specific packages, therefore it is important to install these packages before building the application. Use *** Face-Pixelizer/vendor/python3.8/requirements.txt *** with [pip](https://pypi.org/project/pip/)
 
 
 ## Screenshots
