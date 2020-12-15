@@ -12,7 +12,7 @@ Built with a bunch of things, to name a few:
 ## Setup
 #### Project build instruction
 - clone the repo with ***--recursive*** flag
-- run the *** GenerateProject.bat*** script in the Scripts folder to generate a visual studio 2019 solution. 
+- run the *** GenerateProject.bat *** script in the Scripts folder to generate a visual studio 2019 solution. 
 #### Dependencies setup
 - This application uses python3.8 which requires specific packages, therefore it is important to install these packages before building the application. Use *** Face-Pixelizer/vendor/python3.8/requirements.txt *** with [pip](https://pypi.org/project/pip/)
 
